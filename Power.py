@@ -19,7 +19,7 @@ def get_key_from_user(prompt="Enter secret key (minimum 16 characters): "):
             # UTF-8 encoding converts text characters to byte representation
             key_bytes = key_input.encode('utf-8')
             
-            # Truncate key to valid AES size (16, 24, or 32 bytes)
+            # Truncate key to valid AES size (16, 24, or 32 bytes)1
             # AES only accepts these specific key lengths
             if len(key_bytes) > 32:
                 key_bytes = key_bytes[:32]  # Use first 32 bytes for AES-256
@@ -370,7 +370,6 @@ def decryption_mode():
         else:
             print("Invalid choice. Please enter 1 or 2.")
 
-
 def main():
     while True:
         print("\n" + "=" * 60)
@@ -393,7 +392,5 @@ def main():
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
 
-
 if __name__ == "__main__":
-    
-    main()
+     main()
